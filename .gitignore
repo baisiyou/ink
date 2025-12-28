@@ -1,0 +1,44 @@
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+extracted_text.txt
+page_*.png
+ink.pdf
+
+# Node modules (if using any build tools in future)
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Environment variables
+.env
+server/.env
+
+# Server files (not needed for GitHub Pages)
+server/node_modules/
+server/data/
+server/*.log

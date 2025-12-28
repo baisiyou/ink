@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="heroTitle">Baisiyou Ink Inc. - 热敏微胶囊墨水 | Thermochromic Microcapsule Ink</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="i18n.js" defer></script>
+    <script src="api-client.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Baisiyou Ink</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-i18n="navHome">首页</a></li>
+                <li><a href="#products" class="nav-link" data-i18n="navProducts">产品</a></li>
+                <li><a href="#ink" class="nav-link" data-i18n="navInk">墨水</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="navAbout">关于我们</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="navContact">联系我们</a></li>
+                <li><a href="#comments" class="nav-link" data-i18n="navComments">留言板</a></li>
+            </ul>
+            <div class="language-selector">
+                <span class="lang-option" data-lang="en">EN</span> | 
+                <span class="lang-option" data-lang="zh">中</span> | 
+                <span class="lang-option" data-lang="fr">FR</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-image-wrapper">
+                <img src="public/Frame 4 (2).png" alt="Thermochromic Ink Product" class="hero-main-image" onerror="this.src='public/rectangle-105@2x.png'">
+            </div>
+            <h1 class="hero-title" data-i18n="heroTitle">THERMOCHROMIC MICROCAPSULE INK</h1>
+            <p class="hero-subtitle" data-i18n="heroSubtitle">热敏微胶囊墨水</p>
+            <p class="hero-description">
+                <span data-i18n="heroDescription">The unique thermo-sensitive ink formula allows you to write, erase, and rewrite repeatedly without damaging documents and producing crumbs.</span><br>
+                <strong data-i18n="heroDescriptionBold">Write like a pen and erase like a pencil!</strong>
+            </p>
+            <div class="hero-features">
+                <div class="feature-item">
+                    <span class="feature-icon">✏️</span>
+                    <span data-i18n="heroFeature1">可擦除</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🌡️</span>
+                    <span data-i18n="heroFeature2">温度敏感 (~60°C)</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🔄</span>
+                    <span data-i18n="heroFeature3">可重复使用</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Ink Section -->
+    <section id="ink" class="content-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="inkTitle">热敏墨水特性 | Thermosensitive Ink Properties</h2>
+            <div class="ink-info-grid">
+                <div class="ink-info-card">
+                    <h3 data-i18n="inkHowItWorks">工作原理</h3>
+                    <p data-i18n="inkHowItWorksDesc">
+                        Thermosensitive ink is the most popular and reliable ink that can be erased. 
+                        The ink will react and become transparent at temperatures above 140°F (60°C), 
+                        making your mark look like it has been erased. Because of its heat-reacting 
+                        properties, the ink may reappear when temperatures reach below -15°C.
+                    </p>
+                </div>
+                <div class="ink-info-card">
+                    <h3 data-i18n="inkFeatures">产品特性</h3>
+                    <ul>
+                        <li><strong data-i18n="inkFeature1">可擦除性：</strong><span data-i18n="inkFeature1Desc">Thermosensitive ink is highly sought after due to its ability to be easily erased.</span></li>
+                        <li><strong data-i18n="inkFeature2">温度反应：</strong><span data-i18n="inkFeature2Desc">This ink undergoes a significant change, becoming transparent, when exposed to temperatures exceeding 140°F (60°C).</span></li>
+                        <li><strong data-i18n="inkFeature3">温度敏感性：</strong><span data-i18n="inkFeature3Desc">Given its sensitivity to temperature, it's advisable to store pens and avoid writing in environments with extreme heat or cold.</span></li>
+                    </ul>
+                </div>
+                <div class="ink-info-card full-width">
+                    <div class="ink-demo-images">
+                        <img src="public/Rectangle 37.png" alt="Ink Demonstration" class="ink-demo-image animated-image-1" onerror="this.src='public/rectangle-102@2x.png'">
+                        <img src="public/Rectangle 77.png" alt="Erasing Process" class="ink-demo-image animated-image-2" onerror="this.src='public/rectangle-103@2x.png'">
+                    </div>
+                    <h3 data-i18n="inkMicroTitle">微胶囊热敏墨水</h3>
+                    <p data-i18n="inkMicroDesc">
+                        Our micro-encapsulated thermosensitive ink is formulated with a polyurethane coating 
+                        and does not contain formaldehyde. It exhibits a color-changing temperature range of 
+                        -15 to 60°C. When the temperature exceeds 60°C, the ink vanishes, allowing for effortless 
+                        erasure through simple frictional heating, such as rubbing. The erased areas can be rewritten 
+                        over and erased repeatedly as needed.
+                    </p>
+                    <p class="warning">
+                        <strong data-i18n="inkWarning">注意：</strong><span data-i18n="inkWarningDesc">We advise against writing on the reverse side of the page when using these pens, as heat transfer may occur, leading to unintended erasure.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Features -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="featuresTitle">产品特点 | Product Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="public/Rectangle 41.png" alt="Erasable Properties" class="feature-image" onerror="this.src='public/rectangle-111@2x.png'">
+                    <h3 data-i18n="featureErasable">Erasable Properties</h3>
+                    <p data-i18n="featureErasableDesc">Thermosensitive ink is highly sought after due to its ability to be easily erased.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=500&auto=format&fit=crop" alt="Temperature Reactivity" class="feature-image" onerror="this.src='public/rectangle-112@2x.png'">
+                    <h3 data-i18n="featureReactivity">Temperature Reactivity</h3>
+                    <p data-i18n="featureReactivityDesc">This ink undergoes a significant change, becoming transparent, when exposed to temperatures exceeding 140°F (60°C).</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://images.unsplash.com/photo-1556912173-9c00b9ea0bd1?w=500&auto=format&fit=crop" alt="Temperature Sensitivity" class="feature-image" onerror="this.src='public/Rectangle 76.png'">
+                    <h3 data-i18n="featureSensitivity">Temperature Sensitivity</h3>
+                    <p data-i18n="featureSensitivityDesc">Given its sensitivity to temperature, it's advisable to store pens and avoid writing in environments with extreme heat or cold.</p>
+                </div>
+            </div>
+            
+            <div class="technical-specs">
+                <h3 data-i18n="specsTitle">技术规格 | Technical Specifications</h3>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <strong data-i18n="specsTemp">可用温度：</strong><span data-i18n="specsTempValue">~60°C</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong data-i18n="specsReappear">重现温度：</strong><span data-i18n="specsReappearValue">Below -15°C</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong data-i18n="specsParticle">粒径：</strong><span data-i18n="specsParticleValue">Less than 0.8 micrometers (0.2 to 0.35 microns for fountain pen inks)</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong data-i18n="specsCoating">涂层：</strong><span data-i18n="specsCoatingValue">Polyurethane coating, formaldehyde-free</span>
+                    </div>
+                </div>
+                <p class="spec-description" data-i18n="specsDesc">
+                    The particle size of the thermal-sensitive pigment employed within the pen measures less than 
+                    0.8 micrometers, underscoring its meticulous engineering to achieve optimal performance. This 
+                    finely calibrated size not only ensures precise application but also underscores the pigment's 
+                    remarkable stability, rendering it resistant to fluctuations in environmental conditions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="productsTitle">产品系列 | Product Categories</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="public/Rectangle 7 (1).png" alt="Ballpoint Pen" class="product-image" onerror="this.src='public/image-1@2x.png'">
+                    <h3 data-i18n="productBallpoint">Ballpoint Pens</h3>
+                    <p data-i18n="productBallpointDesc">Reliable and smooth everyday ballpoints for those who need a pen to write every time.</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1517414618682916-a7653208c614?w=400&auto=format&fit=crop" alt="Fountain Pen" class="product-image" onerror="this.src='public/image-2@2x.png'">
+                    <h3 data-i18n="productFountain">Fountain Pens</h3>
+                    <p data-i18n="productFountainDesc">They are also considered to be a more sustainable option than disposable pens, as they can be refilled with ink for many years.</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1564466809058-bf4114613388?w=400&auto=format&fit=crop" alt="Rollerball Pen" class="product-image" onerror="this.src='public/Rectangle 105.png'">
+                    <h3 data-i18n="productRollerball">Rollerball</h3>
+                    <p data-i18n="productRollerballDesc">Advanced needlepoint technology for smooth and careful line production.</p>
+                </div>
+                <div class="product-card">
+                    <img src="public/Rectangle 6 (1).png" alt="Erasable Gel Pen" class="product-image" onerror="this.src='public/image-4@2x.png'">
+                    <h3 data-i18n="productGel">Erasable Gel Pen</h3>
+                    <p data-i18n="productGelDesc">Magic Erasable Ink - Write like a pen and erase like a pencil!</p>
+                </div>
+            </div>
+            <div class="product-note">
+                <p>
+                    <strong data-i18n="productColorNote">颜色说明：</strong><span data-i18n="productColorNoteDesc">Thermal erasable ink is difficult to obtain pure black, so most black inks are dark gray or gray-black. Other colors are also softer than the colors in the non-erasable pen.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Services -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="servicesTitle">专业服务 | Professional Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 data-i18n="serviceKitchen">Ink Kitchen Development</h3>
+                    <p data-i18n="serviceKitchenDesc">Custom ink formulation and development</p>
+                </div>
+                <div class="service-card">
+                    <h3 data-i18n="serviceOptimization">Ink/Fluid Optimization</h3>
+                    <p data-i18n="serviceOptimizationDesc">Performance optimization for your specific applications</p>
+                </div>
+                <div class="service-card">
+                    <h3 data-i18n="serviceDevelopment">Ink/Fluid Development</h3>
+                    <p data-i18n="serviceDevelopmentDesc">Research and development of new ink formulations</p>
+                </div>
+                <div class="service-card">
+                    <h3 data-i18n="serviceStabilization">Ink/Fluid Stabilization</h3>
+                    <p data-i18n="serviceStabilizationDesc">Ensuring long-term stability and quality</p>
+                </div>
+                <div class="service-card">
+                    <h3 data-i18n="serviceCharacterization">Component Characterization</h3>
+                    <p data-i18n="serviceCharacterizationDesc">Detailed analysis of ink components</p>
+                </div>
+                <div class="service-card">
+                    <h3 data-i18n="serviceTesting">Suitability Testing</h3>
+                    <p data-i18n="serviceTestingDesc">Comprehensive testing for various applications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="aboutTitle">关于我们 | About Us</h2>
+            <div class="about-content">
+                <div class="company-intro">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&auto=format&fit=crop" alt="Baisiyou Team" class="company-intro-image" onerror="this.src='public/group-29@2x.png'">
+                    <p data-i18n="aboutIntro">
+                        Baisiyoutech Co., Ltd. specializes in producing various types of inks. These inks include 
+                        thermosensitive ink, conductive ink, electronic ink, inkjet printing ink, PEDOT-PSS 
+                        transparent electrode ink and so on. We have strong technical strength and top technical 
+                        personnel, with R&D laboratories and production plants in China and Canada.
+                    </p>
+                </div>
+
+                <div class="our-story">
+                    <h3 data-i18n="aboutStoryTitle">我们的故事 | Our Story</h3>
+                    <p data-i18n="aboutStory1">
+                        In our quest for innovation, we embarked on a journey to develop thermosensitive ink. It 
+                        began with a vision to create a product that would revolutionize the way people interact 
+                        with ink. Through rigorous research and experimentation, we overcame challenges and obstacles, 
+                        pushing the boundaries of ink technology.
+                    </p>
+                    <p data-i18n="aboutStory2">
+                        Our dedicated team of experts worked tirelessly, driven by a passion for innovation and 
+                        excellence. After countless hours of hard work and determination, we achieved a breakthrough. 
+                        Our thermosensitive ink was born, offering a unique and interactive experience to users.
+                    </p>
+                    <p data-i18n="aboutStory3">
+                        Another obstacle to overcome when making fountain pen inks is to reduce the size of ink 
+                        particles, which are quite large because they contain three different components in 
+                        microcapsules. We reduced the particles to a quarter of their original size. Their width 
+                        is 0.2 to 0.35 microns, which is about 400 times narrower than a human hair.
+                    </p>
+                </div>
+
+                <div class="our-team">
+                    <h3 data-i18n="aboutTeamTitle">我们的团队 | Our Team</h3>
+                    <p data-i18n="aboutTeam1">
+                        With a team comprised of doctoral and master's graduates in materials science and physical 
+                        chemistry, we bring a wealth of expertise to the table. Our advanced knowledge in these 
+                        fields enables us to tackle complex challenges in ink development with precision and innovation.
+                    </p>
+                    <p data-i18n="aboutTeam2">
+                        Moreover, our arsenal includes state-of-the-art synthesis and detection equipment, allowing 
+                        us to stay at the forefront of technology and maintain a competitive edge in the industry. 
+                        From cutting-edge synthesis techniques to high-precision detection methods, we leverage the 
+                        latest tools and technologies to drive our research and development efforts forward.
+                    </p>
+                </div>
+
+                <div class="our-values">
+                    <h3 data-i18n="aboutValuesTitle">我们的价值观 | Our Values</h3>
+                    <p data-i18n="aboutValuesDesc">They serve as a compass guiding who we are, how we work, and what we're focused on next.</p>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <h4 data-i18n="valueCentric">Member Centric</h4>
+                            <p data-i18n="valueCentricDesc">Being helpful is part of our DNA.</p>
+                        </div>
+                        <div class="value-card">
+                            <h4 data-i18n="valueHelpful">Helpful</h4>
+                            <p data-i18n="valueHelpfulDesc">We are here to help you.</p>
+                        </div>
+                        <div class="value-card">
+                            <h4 data-i18n="valueTransparent">Transparent</h4>
+                            <p data-i18n="valueTransparentDesc">We are open, honest, and straightforward.</p>
+                        </div>
+                        <div class="value-card">
+                            <h4 data-i18n="valuePersistent">Persistent</h4>
+                            <p data-i18n="valuePersistentDesc">We don't give up when things get challenging.</p>
+                        </div>
+                        <div class="value-card">
+                            <h4 data-i18n="valueTogether">Better Together</h4>
+                            <p data-i18n="valueTogetherDesc">Collaboration drives our success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paste Section -->
+    <section id="paste" class="paste-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="pasteTitle">浆料产品 | Paste Products</h2>
+            <p class="section-description" data-i18n="pasteDesc">
+                我们的浆料产品是热敏墨水的重要组成部分，具有优异的稳定性和性能表现。
+            </p>
+        </div>
+    </section>
+
+    <!-- Refills Section -->
+    <section id="refills" class="refills-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="refillsTitle">笔芯产品 | Refills</h2>
+            <p class="section-description" data-i18n="refillsDesc">
+                高品质的笔芯，可重复填充使用，环保可持续。
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contactTitle">联系我们 | Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3 data-i18n="contactSales">销售咨询 | Sales Inquiries</h3>
+                        <p><span data-i18n="contactSalesCall">Call:</span> <a href="tel:+15149986168">+1 514 998-6168</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h3 data-i18n="contactSupport">客户支持 | Customer Support</h3>
+                        <p><span data-i18n="contactSupportCall">Call:</span> <a href="tel:+15149986168">+1 514 998-6168</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h3 data-i18n="contactOther">其他咨询 | Other Requests</h3>
+                        <p><span data-i18n="contactOtherCall">Call:</span> <a href="tel:+15149986168">+1 514 998-6168</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h3 data-i18n="contactGeneral">一般咨询 | General Inquiries</h3>
+                        <p><span data-i18n="contactGeneralCall">Call:</span> <a href="tel:+15149986168">+1 514 998-6168</a></p>
+                    </div>
+                </div>
+
+                <div class="address-section">
+                    <h3 data-i18n="contactAddressTitle">我们的地址 | Our Address</h3>
+                    <div class="address-grid">
+                        <div class="address-card">
+                            <h4 data-i18n="contactChina">🇨🇳 中国 | China</h4>
+                            <p data-i18n-html="contactChinaAddress">
+                                156 Guanghua Road, Qinhuai District<br>
+                                Nanjing, China 210014
+                            </p>
+                            <p>
+                                Tel: <a href="tel:+8613951873061">86-13951873061</a><br>
+                                <a href="tel:+8613337181827">86-13337181827</a>
+                            </p>
+                        </div>
+                        <div class="address-card">
+                            <h4 data-i18n="contactCanada">🇨🇦 加拿大 | Canada</h4>
+                            <p data-i18n-html="contactCanadaAddress">
+                                1190 Mackay Street<br>
+                                Montreal, QC, Canada H3G 0G1
+                            </p>
+                            <p>
+                                Tel: <a href="tel:+15145494158">1-(514) 549-4158</a><br>
+                                <a href="tel:+15149986168">1-(514) 998-6168</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="email-contact">
+                        <p><strong data-i18n="contactEmail">Email:</strong> <a href="mailto:baisiyou@gmail.com">baisiyou@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comments Section -->
+    <section id="comments" class="comments-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="commentsTitle">留言板 | Guestbook</h2>
+            
+            <!-- Register/Login Form -->
+            <div class="auth-container" id="authContainer">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" id="registerTab" data-i18n="registerTab">注册</button>
+                    <button class="auth-tab" id="loginTab" data-i18n="loginTab">登录</button>
+                </div>
+                
+                <!-- Register Form -->
+                <div class="auth-card" id="registerCard">
+                    <h3 data-i18n="registerTitle">注册 | Register</h3>
+                    <form id="registerForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="regUsername" data-i18n="registerUsername">用户名：</label>
+                            <input type="text" id="regUsername" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regEmail" data-i18n="registerEmail">邮箱：</label>
+                            <input type="email" id="regEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regPassword" data-i18n="registerPassword">密码：</label>
+                            <input type="password" id="regPassword" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regPasswordConfirm" data-i18n="registerPasswordConfirm">确认密码：</label>
+                            <input type="password" id="regPasswordConfirm" name="passwordConfirm" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-i18n="registerButton">注册</button>
+                        <p class="auth-note" data-i18n="registerNote">已有账号？点击上方"登录"标签</p>
+                    </form>
+                </div>
+
+                <!-- Login Form -->
+                <div class="auth-card" id="loginCard" style="display: none;">
+                    <h3 data-i18n="loginTitle">登录 | Login</h3>
+                    <form id="loginForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="username" data-i18n="loginUsername">用户名：</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" data-i18n="loginPassword">密码：</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-i18n="loginButton">登录</button>
+                        <p class="auth-note" data-i18n="loginNote">没有账号？点击上方"注册"标签</p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- User Info (hidden until logged in) -->
+            <div class="user-info" id="userInfo" style="display: none;">
+                <p><span data-i18n="welcomeUser">欢迎，</span><strong id="loggedInUsername"></strong> | <a href="#" id="logoutLink" data-i18n="logoutLink">退出登录</a></p>
+            </div>
+
+            <!-- Comment Form (shown only when logged in) -->
+            <div class="comment-form-container" id="commentFormContainer" style="display: none;">
+                <div class="comment-form-card">
+                    <h3 data-i18n="commentFormTitle">留下您的留言 | Leave a Comment</h3>
+                    <form id="commentForm" class="comment-form">
+                        <div class="form-group">
+                            <label for="commentMessage" data-i18n="commentMessage">留言内容：</label>
+                            <textarea id="commentMessage" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-i18n="commentSubmit">提交留言</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Login Required Message -->
+            <div class="login-required-message" id="loginRequiredMessage">
+                <p data-i18n="loginRequiredText">请先注册或登录后留言</p>
+            </div>
+
+            <!-- Comments Display -->
+            <div class="comments-list-container">
+                <h3 data-i18n="commentsListTitle">留言列表 | Comments</h3>
+                <div id="commentsList" class="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                    <p class="no-comments" data-i18n="noComments">暂无留言，快来成为第一个留言的人吧！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#about" data-i18n="footerAbout">关于我们</a>
+                    <a href="#contact" data-i18n="footerContact">联系我们</a>
+                    <a href="#help" data-i18n="footerHelp">帮助</a>
+                    <a href="#privacy" data-i18n="footerPrivacy">隐私政策</a>
+                    <a href="#disclaimer" data-i18n="footerDisclaimer">免责声明</a>
+                </div>
+                <div class="footer-social">
+                    <span data-i18n="footerFollow">关注我们：</span>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <img src="public/linkedin-black1@2x.png" alt="LinkedIn" class="social-icon">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <img src="public/twitter.svg" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <img src="public/instagram-black1@2x.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <img src="public/youtube-color1@2x.png" alt="YouTube" class="social-icon">
+                    </a>
+                </div>
+                <div class="footer-copyright">
+                    <p data-i18n="footerCopyright">Copyright © 2025 Baisiyou Ink Inc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
