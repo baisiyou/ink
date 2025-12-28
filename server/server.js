@@ -51,6 +51,19 @@ if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS && p
     console.warn('⚠️  Email service not configured. Set SMTP_HOST, SMTP_USER, SMTP_PASS, and NOTIFICATION_EMAIL in .env file');
 }
 
+// Helper function to escape HTML
+function escapeHtml(text) {
+    if (!text) return '';
+    const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+    };
+    return text.replace(/[&<>"']/g, m => map[m]);
+}
+
 // Helper function to append data to file
 function appendToFile(filePath, data, separator = '\n' + '='.repeat(80) + '\n') {
     const timestamp = new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' });
@@ -217,13 +230,18 @@ app.post('/api/comment', (req, res) => {
         console.log(`✅ Comment saved: ${username} - ${message.substring(0, 50)}...`);
         
         // Send email notification
+        const escapedUsername = escapeHtml(username);
+        const escapedEmail = escapeHtml(email || '未提供');
+        const escapedMessage = escapeHtml(message);
+        const timestamp = new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' });
+        
         const emailSubject = `新留言 - 来自 ${username}`;
         const emailText = `
 新留言通知
 
 留言人: ${username}
 邮箱: ${email || '未提供'}
-留言时间: ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}
+留言时间: ${timestamp}
 留言内容:
 ${message}
 
@@ -232,24 +250,47 @@ ${message}
         `.trim();
         
         const emailHtml = `
-            <h2>新留言通知</h2>
-            <div style="background: #f5f5f5; padding: 20px; border-radius: 5px;">
-                <p><strong>留言人:</strong> ${username}</p>
-                <p><strong>邮箱:</strong> ${email || '未提供'}</p>
-                <p><strong>留言时间:</strong> ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}</p>
-            </div>
-            <hr>
-            <h3>留言内容:</h3>
-            <div style="background: #fff; padding: 15px; border-left: 4px solid #2563eb; margin: 15px 0;">
-                <p style="white-space: pre-wrap; margin: 0;">${message.replace(/\n/g, '<br>')}</p>
-            </div>
-            <hr>
-            <p style="color: #888; font-size: 12px;">此邮件由 Baisiyou Ink 网站自动发送</p>
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>新留言通知</title>
+            </head>
+            <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+                <h2 style="color: #2563eb; border-bottom: 2px solid #2563eb; padding-bottom: 10px;">新留言通知</h2>
+                <div style="background: #f5f5f5; padding: 20px; border-radius: 5px; margin: 20px 0;">
+                    <p><strong>留言人:</strong> ${escapedUsername}</p>
+                    <p><strong>邮箱:</strong> ${escapedEmail}</p>
+                    <p><strong>留言时间:</strong> ${timestamp}</p>
+                </div>
+                <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
+                <h3 style="color: #2563eb; margin-top: 30px;">留言内容:</h3>
+                <div style="background: #fff; padding: 15px; border-left: 4px solid #2563eb; margin: 15px 0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <p style="white-space: pre-wrap; margin: 0; font-size: 16px; line-height: 1.8;">${escapedMessage.replace(/\n/g, '<br>')}</p>
+                </div>
+                <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
+                <p style="color: #888; font-size: 12px; text-align: center; margin-top: 30px;">此邮件由 Baisiyou Ink 网站自动发送</p>
+            </body>
+            </html>
         `;
         
-        sendEmail(emailSubject, emailText, emailHtml).catch(err => {
-            console.error('Email sending failed:', err);
-        });
+        // Log email content for debugging
+        console.log(`📧 Preparing to send email for comment from ${username}`);
+        console.log(`   Message length: ${message.length} characters`);
+        console.log(`   Message preview: ${message.substring(0, 100)}...`);
+        
+        sendEmail(emailSubject, emailText, emailHtml)
+            .then(success => {
+                if (success) {
+                    console.log(`✅ Comment email sent successfully to ${process.env.NOTIFICATION_EMAIL}`);
+                } else {
+                    console.error(`❌ Failed to send comment email`);
+                }
+            })
+            .catch(err => {
+                console.error('❌ Email sending error:', err.message);
+            });
         
         res.json({ 
             message: 'Comment saved successfully',
