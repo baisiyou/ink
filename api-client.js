@@ -7,10 +7,8 @@ const API_BASE_URL = (function() {
     }
     
     // 生产环境：使用 Render 后端地址
-    // ⚠️ 部署到 Render 后，请将下面的 URL 替换为您的实际 Render 服务地址
-    // 例如：'https://baisiyou-ink-api.onrender.com/api'
-    // 获取地址：在 Render Dashboard 中查看您的服务 URL
-    return 'https://baisiyou-ink-api.onrender.com/api';
+    // Render 后端服务地址
+    return 'https://ink-th4e.onrender.com/api';
 })();
 
 class ApiClient {
