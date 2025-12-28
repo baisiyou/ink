@@ -6,10 +6,11 @@ const API_BASE_URL = (function() {
         return 'http://localhost:3000/api';
     }
     
-    // 生产环境：使用 Render 或其他平台的后端地址
-    // 部署后，请将下面的 URL 替换为您的实际后端地址
-    // 例如：'https://your-app-name.onrender.com/api'
-    return 'https://your-app-name.onrender.com/api';
+    // 生产环境：使用 Render 后端地址
+    // ⚠️ 部署到 Render 后，请将下面的 URL 替换为您的实际 Render 服务地址
+    // 例如：'https://baisiyou-ink-api.onrender.com/api'
+    // 获取地址：在 Render Dashboard 中查看您的服务 URL
+    return 'https://baisiyou-ink-api.onrender.com/api';
 })();
 
 class ApiClient {
